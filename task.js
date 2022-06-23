@@ -1,17 +1,14 @@
-const object = {
-  mail: "poly@mail.com",
-  isOnline: true,
-  score: 500,
-}
+const book = {
+  title: "Ostatnie królestwo",
+  author: "Bernard Cornwell",
+  genres: ["proza ​​historyczna", "przygody"],
+  rating: 8.38,
+};
+const keys = Object.keys(book);
 
-function countProps(object) {
-  let propCount = 0;
-  // Change code below this line
-  for (key in object) {
-    if (object.hasOwnProperty(key)) {
-      propCount += 1;
-    }
-  }
-  // Change code above this line
-  return propCount;
+for (const key of keys) {
+  // Klucz
+  console.log(key);
+  // Wartość właściwości
+  console.log(book[key]);
 }
