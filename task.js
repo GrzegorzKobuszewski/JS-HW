@@ -1,26 +1,24 @@
-const books = [
-  {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    rating: 8.38,
-  },
-  {
-    title: "Beside Still Waters",
-    author: "Robert Sheckley",
-    rating: 8.51,
-  },
-  {
-    title: "Sen śmiesznego człowieka",
-    author: "Fiodor Dostojewski",
-    rating: 10.1,
-  },
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
 ];
 
-let totalRating = 0;
 
-for (const book of books) {
-  totalRating += book.rating;
+function getAllPropValues(propName) {
+  // Change code below this line
+
+const array=[];
+  
+  for (const product of products) {
+    if (product.hasOwnProperty(propName)) {
+      array.push(product[propName])
+    } else {[]}
+  }
+  return array;
+
+  // Change code above this line
 }
 
-const averageRating = (totalRating / books.length).toFixed(2);
-console.log(averageRating); // 8.2
+console.log (getAllPropValues("name"));
