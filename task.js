@@ -5,20 +5,17 @@ const products = [
   { name: "Grip", price: 1200, quantity: 9 },
 ];
 
-
-function getAllPropValues(propName) {
-  // Change code below this line
-
-const array=[];
-  
+function calculateTotalPrice(productName) {
+  // Пиши код ниже этой строки
+let totalPrice = 0;
   for (const product of products) {
-    if (product.hasOwnProperty(propName)) {
-      array.push(product[propName])
-    } else {[]}
+    if (product.name === productName) {
+      totalPrice = product.price * product.quantity
+    }
   }
-  return array;
-
-  // Change code above this line
+  return totalPrice;
+  // Пиши код выше этой строки
 }
 
-console.log (getAllPropValues("name"));
+console.log(calculateTotalPrice("Radar"));
+console.log("Sprawdzenie:", products[0].price*products[0].quantity);
