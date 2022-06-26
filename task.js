@@ -1,23 +1,17 @@
-// Change code below this line
-function calculateMeanTemperature(forecast) {
-  const {today:{low:todayLow, high:todayHigh}, 
-         tomorrow:{low:tomorrowLow, high:tomorrowHigh}} = forecast;
-
-  // Change code above this line
-  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+const array_1 = {
+  name: "Rafał",
+  age: 15,
+  address: "Poznań",
 }
+const array_2 = array_1;
+array_2.country=("Poland");
+//Niestety oba obiekty mają te same wartości
+console.log(array_1);
+console.log(array_2);
+//Unikamy tego tworząc kopię wartości,
+// która nie skopiuje kolejnego dodanego elementu
+const copyOfArray_1 = {...array_1};
+array_2.country2=("Poland2");
+console.log(array_1);
+console.log(copyOfArray_1);
 
-
-
-// TAKIE COŚ BYŁO
-//   {today: { low: 10, high: 20 },
-//   tomorrow: { low: 20, high: 30 }}
-  // const todayLow = forecast.today.low;
-  // const todayHigh = forecast.today.high;
-  // const tomorrowLow = forecast.tomorrow.low;
-  // const tomorrowHigh = forecast.tomorrow.high;
-function calculateMeanTemperature(forecast) {
-  const {today:{low:todayLow, high:todayHigh}, 
-         tomorrow:{low:tomorrowLow, high:tomorrowHigh}} = forecast;
-  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
-}
