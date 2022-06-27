@@ -1,17 +1,18 @@
 const bookShelf = {
-  // Change code below this line
-  books: ["The last kingdom", "The guardian of dreams"],
-  getBooks() {
-    return "Returning all books";
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    // Change code below this line
+    console.log(this.books);
+    const indexBook = this.books.indexOf(oldName);
+
+    let array = this.books.splice(indexBook, 1, newName);
+    console.log (this.books);
+    return;
+    // Change code above this line
   },
-  addBook(bookName) {
-    return `Adding book ${bookName}`;
-  },
-  removeBook(oldName) {
-    return `Deleting book ${oldName}`;
-  },
-    updateBook(oldName, newName) {
-    return `Updating book ${oldName} to ${newName}`;
-  },  
-  // Change code above this line
 };
+
+bookShelf.updateBook("The last kingdom", "Dune");
+
+
+
