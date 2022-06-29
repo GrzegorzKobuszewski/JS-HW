@@ -26,6 +26,7 @@ pizzaPalace.order("Four meats", makePizza, onOrderError);
 pizzaPalace.order("Big Mike", makePizza, onOrderError);
 pizzaPalace.order("Vienna", makePizza, onOrderError);
 
+//Wywołanie:
 console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
 console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
 console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
