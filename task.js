@@ -1,27 +1,23 @@
-const numbers = [5, 10, 15, 20, 25];
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+// Change code below this line
 
-let total = 0;
-
-// Iterujący forEach
-  numbers.forEach(function (number, index) {
-    total += number;
-  console.log(`Indeks ${index}, wartość ${number}`);
-});
-
-console.log(total);
-
-
-
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
-  // Change code below this line
-
-  orderedItems.forEach(function (number) {
-  totalPrice += number;
-  });
-
-  // Change code above this line
-  return totalPrice;
-}
-
-console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+const titles = books.map(books=>books.title);
+console.log(titles);
