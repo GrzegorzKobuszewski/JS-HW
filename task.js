@@ -6,8 +6,7 @@ const users = [
         friends: ["Sharron Pace"],
         isActive: false,
         balance: 2811,
-        gender: "male",
-        age: 37
+        gender: "male"
     },
     {
         name: "Sharlene Bush",
@@ -16,8 +15,7 @@ const users = [
         friends: ["Briana Decker", "Sharron Pace"],
         isActive: true,
         balance: 3821,
-        gender: "female",
-        age: 34
+        gender: "female"
     },
     {
         name: "Ross Vazquez",
@@ -26,8 +24,7 @@ const users = [
         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
         isActive: false,
         balance: 3793,
-        gender: "male",
-        age: 24
+        gender: "male"
     },
     {
         name: "Elma Head",
@@ -36,8 +33,7 @@ const users = [
         friends: ["Goldie Gentry", "Aisha Tran"],
         isActive: true,
         balance: 2278,
-        gender: "female",
-        age: 21
+        gender: "female"
     },
     {
         name: "Carey Barr",
@@ -46,8 +42,7 @@ const users = [
         friends: ["Jordan Sampson", "Eddie Strong"],
         isActive: true,
         balance: 3951,
-        gender: "male",
-        age: 27
+        gender: "male"
     },
     {
         name: "Blackburn Dotson",
@@ -56,8 +51,7 @@ const users = [
         friends: ["Jacklyn Lucas", "Linda Chapman"],
         isActive: false,
         balance: 1498,
-        gender: "male",
-        age: 38
+        gender: "male"
     },
     {
         name: "Sheree Anthony",
@@ -66,18 +60,15 @@ const users = [
         friends: ["Goldie Gentry", "Briana Decker"],
         isActive: true,
         balance: 2764,
-        gender: "female",
-        age: 39
+        gender: "female"
     }
 ];
 
-const minAge = 20;
-const maxAge = 60;
+// Change code below this line
+const getTotalFriendCount = users => users.reduce ((acc, user) => {
+  return acc+user.friends.length;
+},0);
+// Change code above this line
 
-const getUsersWithAge = (users, minAge, maxAge) => {
-    return users
-        .filter(user => ((minAge < user.age) && (maxAge > user.age)))
-        .map(user => user.name);
-};
+console.log(getTotalFriendCount(users));
 
-console.log((getUsersWithAge(users, minAge, maxAge)));
