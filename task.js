@@ -64,11 +64,9 @@ const users = [
     }
 ];
 
+
 // Change code below this line
-const getTotalFriendCount = users => users.reduce ((acc, user) => {
-  return acc+user.friends.length;
-},0);
+const sortByName = users => [...users].sort ((a,b)=> 
+      a.name.localeCompare(b.name));
 // Change code above this line
-
-console.log(getTotalFriendCount(users));
-
+console.log(sortByName(users)[1]);
