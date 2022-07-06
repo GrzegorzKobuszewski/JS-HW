@@ -1,15 +1,23 @@
-const bookShelf2 = {
-  books: ["The last kingdom", "Haze", "The guardian of dreams"],
-  updateBook(oldName, newName) {
-    // Change code below this line
-    console.log(this.books);
-    const indexBook = this.books.indexOf(oldName);
 
-    let array = this.books.splice(indexBook, 1, newName);
-    console.log (this.books);
-    return;
-    // Change code above this line
-  },
-};
+class StringBuilder {
+  constructor (initialValue) {
+    this.value=initialValue;
+  }
+  getValue() {return this.value};
+  padEnd(str) {this.value = this.value + str};
+  padStart(str) {this.value =  str + this.value};
+  padBoth(str) {this.value =  str + this.value + str};
+}
 
-bookShelf2.updateBook("Haze", "Dungeon chronicles");
+// Change code above this line
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
