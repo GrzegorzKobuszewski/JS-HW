@@ -1,23 +1,19 @@
+class User {
+  static #takenEmails = [];
 
-class StringBuilder {
-  constructor (initialValue) {
-    this.value=initialValue;
+  static isEmailTaken(email) {
+    return User.#takenEmails.includes(email);
   }
-  getValue() {return this.value};
-  padEnd(str) {this.value = this.value + str};
-  padStart(str) {this.value =  str + this.value};
-  padBoth(str) {this.value =  str + this.value + str};
+
+  #email;
+
+  constructor({ email }) {
+    this.#email = email;
+    User.#takenEmails.push(email);
+  }
 }
 
-// Change code above this line
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
+const mango = new User({ email: "mango@mail.com" });
 
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+console.log(User.isEmailTaken("poly@mail.com"));
+console.log(User.isEmailTaken("mango@mail.com"));
