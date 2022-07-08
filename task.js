@@ -1,19 +1,19 @@
-class User {
-  static #takenEmails = [];
+const pizzaPalace = {
+  pizzas: ["Supercheese", "Smoked", "Four meats"],
+  // Change code below this line
+  checkPizza(pizzaName) {
+    return this.pizzas.includes(pizzaName);
+  },
+  order(pizzaName) {
+    const isPizzaAvailable = this.checkPizza(pizzaName);
 
-  static isEmailTaken(email) {
-    return User.#takenEmails.includes(email);
-  }
+    if (!isPizzaAvailable) {
+      return `Sorry, there is no pizza named «${pizzaName}»`;
+    }
 
-  #email;
+    return `Order accepted, preparing «${pizzaName}» pizza`;
+  },
+  // Change code above this line
+};
 
-  constructor({ email }) {
-    this.#email = email;
-    User.#takenEmails.push(email);
-  }
-}
-
-const mango = new User({ email: "mango@mail.com" });
-
-console.log(User.isEmailTaken("poly@mail.com"));
-console.log(User.isEmailTaken("mango@mail.com"));
+console.log (pizzaPalace);
