@@ -16,4 +16,4 @@ const pizzaPalace = {
   // Change code above this line
 };
 
-console.log (pizzaPalace);
+console.log (pizzaPalace.order("Smoked"));
