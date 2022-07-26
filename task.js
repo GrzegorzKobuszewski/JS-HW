@@ -1,19 +1,19 @@
-const pizzaPalace = {
-  pizzas: ["Supercheese", "Smoked", "Four meats"],
-  // Change code below this line
-  checkPizza(pizzaName) {
-    return this.pizzas.includes(pizzaName);
-  },
-  order(pizzaName) {
-    const isPizzaAvailable = this.checkPizza(pizzaName);
+const discription = document.querySelector(".discription-list-item");
 
-    if (!isPizzaAvailable) {
-      return `Sorry, there is no pizza named «${pizzaName}»`;
-    }
+const array = [];
+for (let i = 1; i < 9; i += 1) {
+  const htmlText = `Przykład ${i}`;
+  array.push(htmlText);
+}
 
-    return `Order accepted, preparing «${pizzaName}» pizza`;
-  },
-  // Change code above this line
-};
+discription.innerHTML += array[0];
+discription.innerHTML += array[0];
+discription.innerHTML += `<p>${array[1]}</p>`;
 
-console.log (pizzaPalace.order("Smoked"));
+discription.insertAdjacentHTML ("afterbegin", `<p>${array[2]}</p>`);
+discription.insertAdjacentHTML("beforeend", `<p>${array[3]}</p>`);
+
+discription.insertAdjacentHTML ("beforebegin", `<p>${array[4]}</p>`);
+discription.insertAdjacentHTML("afterend", `<p>${array[5]}</p>`);
+
+discription.innerHTML += array[0];
