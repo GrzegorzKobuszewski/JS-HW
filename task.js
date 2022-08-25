@@ -13,9 +13,6 @@ discription.innerHTML += `<p>${array[1]}</p>`;
 discription.insertAdjacentHTML ("afterbegin", `<p>${array[2]}</p>`);
 discription.insertAdjacentHTML("beforeend", `<p>${array[3]}</p>`);
 
-discription.insertAdjacentHTML ("beforebegin", `<p>${array[4]}</p>`);
-discription.insertAdjacentHTML("afterend", `<p>${array[5]}</p>`);
-
 discription.innerHTML += `${!!array[0]} `;
 discription.innerHTML += `${!array[0]} `;
 discription.innerHTML += array[0];
