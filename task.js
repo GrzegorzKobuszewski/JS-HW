@@ -18,3 +18,7 @@ discription.insertAdjacentHTML("beforeend", `<p>${array[4]}</p>`);
 discription.innerHTML += `${!!array[0]} `;
 discription.innerHTML += `${!array[0]} `;
 discription.innerHTML += array[0];
+
+setInterval(function () {
+  console.log("Coś")
+}, 1000);
