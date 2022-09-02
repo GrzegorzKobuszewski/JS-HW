@@ -10,6 +10,6 @@ console.log(arr3);
 
 arr1 = null;
 arr2 = undefined;
-arr3 = "cos";
+arr3 = "cosTam";
 
 
